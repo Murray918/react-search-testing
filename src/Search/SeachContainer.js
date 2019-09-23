@@ -6,7 +6,7 @@ class SearchContainer extends Component {
     state = {
         articles = []
     }
-
+    // make our api call and set the state
     preformSearch = event => {
         const articles = await fetchArticles(event)
         this.setState({articles : articles.data.response.results})
