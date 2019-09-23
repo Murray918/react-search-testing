@@ -10,5 +10,3 @@ const fetchArticles = async value => {
 export {
     fetchArticles
 }
-
-// https://content.guardianapis.com/search?api-key=073851a6-20d6-43df-8dcd-a8a1b8ac8502
