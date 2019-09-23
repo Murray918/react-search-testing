@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const SearchResults = ({ articles }) => {
+const SearchResults = ({ articles = [] }) => {
 	return (
 		<ul className="search-results">
 			{articles.map(({webUrl, webTitle}) => {
