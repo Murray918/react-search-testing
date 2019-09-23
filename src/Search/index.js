@@ -1,5 +1,3 @@
-import  { SearchContainer as Search} from './SearchContainer'
+import SearchContainer from './SeachContainer'
 
-export {
-    Search
-}
+export default SearchContainer

@@ -1,23 +1,26 @@
 import React, {Component} from 'react' 
 import Search from './Search'
-import {fetchArticles } from './api_service'
+import { fetchArticles } from './api_service'
 
 // here is the container for the search component it stores most of the logic pertaining to the API
 class SearchContainer extends Component {
     state = {
-        articles = []
+        articles : []
     }
     // make our api call and set the state
-    preformSearch = event => {
+    preformSearch = async event => {
         const articles = await fetchArticles(event)
         this.setState({articles : articles.data.response.results})
     }
     render() {
+        return(
         <Search 
             preformSearch = {this.preformSearch}
             articles = {this.state.articles}
         />
+        )
     }
+
 }
 
 export default SearchContainer

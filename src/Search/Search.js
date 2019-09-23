@@ -6,9 +6,8 @@ class Search extends Component {
 	state = {
 		value: ''
 	}
-	// deconstruct props
 
-	// events below
+    // events below
 	handleChange = event => {
 		this.setState({
 			[event.target.name]: event.target.value
@@ -16,20 +15,20 @@ class Search extends Component {
 	}
 
 	handleSubmit = event => {
-		event.preventDefault()
+        event.preventDefault()
+        //this.props.preformSearch 
 	}
 	render() {
 		return (
 			<div>
 				<h1>Search Application</h1>
-				<form className="search-form" onSubmit={handleSubmit}>
+				<form className="search-form" onSubmit={this.handleSubmit}>
 					<input 
-                        onChange={handleChange} 
+                        onChange={this.handleChange} 
                         name="value" 
                         type="text"
-                        >
-						{this.state.value}
-					</input>
+						value={this.state.value}
+					/>
 				</form>
 			</div>
 		)
