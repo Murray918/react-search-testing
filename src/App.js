@@ -1,5 +1,4 @@
 import React from 'react'
-import logo from './logo.svg'
 import  SearchContainer from './Search'
 import './App.css'
 
