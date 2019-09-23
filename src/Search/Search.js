@@ -9,14 +9,13 @@ class Search extends Component {
 
     // events below
 	handleChange = event => {
-		this.setState({
-			[event.target.name]: event.target.value
-		})
+		let value = event.target.value
+		this.setState({ value })
+		this.props.preformSearch(value)
 	}
 
 	handleSubmit = event => {
         event.preventDefault()
-        //this.props.preformSearch 
 	}
 	render() {
 		return (
