@@ -5,18 +5,21 @@ import Search from './Search'
 // Enzyme.configure({ adapter : new Adapter})
 
 describe('Search component', () => {
-	test('renders', () => {
+
+	test('renders and exists', () => {
 		const wrap = shallow(<Search />)
 		expect(wrap.exists()).toBe(true)
 	})
-	test('user text is echoed', () => {
+
+	test('user text is is properly recorded', () => {
 		const wrap = shallow(<Search preformSearch={() => {}} />)
 		// simulate the text changing
 		wrap.find('input').simulate('change', { target: { value: 'hello' } })
 		//set our expectations
 		expect(wrap.find('input').props().value).toEqual('hello')
 	})
-	test('when the form is submited the event is canceled', () => {
+
+	test('when the form is submitted the event is canceled', () => {
 		const wrap = shallow(<Search />)
 		let prevented = false
 		wrap.find('form').simulate('submit', {
@@ -26,6 +29,7 @@ describe('Search component', () => {
 		})
 		expect(prevented).toBe(true)
 	})
+
 	test('renders search results when the articles change', () => {
 		const mountedWrap = mount(<Search articles={[]} />)
 
