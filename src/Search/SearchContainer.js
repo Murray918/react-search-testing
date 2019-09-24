@@ -13,7 +13,8 @@ class SearchContainer extends Component {
 			const articles = await fetchArticles(event)
 			this.setState({ articles: articles })
 		} catch (error) {
-			console.error(error)
+			// we throw an error here insead of console.error because it broke the test for some reason
+			throw Error(error)
 		}
 	}
 	render() {
