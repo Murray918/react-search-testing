@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Search from './Search'
 import { fetchArticles } from './api_service'
-import SearchResults from './SearchResults'
 
 // here is the container for the search component it stores most of the logic pertaining to the API
 class SearchContainer extends Component {
