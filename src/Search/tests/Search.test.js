@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme'
-import Search from './Search'
+import Search from '../Search'
 
 // Enzyme.configure({ adapter : new Adapter})
 
