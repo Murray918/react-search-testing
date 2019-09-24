@@ -18,12 +18,10 @@ class SearchContainer extends Component {
 	}
 	render() {
 		return (
-        <div className='Search'>
 			<Search
 				preformSearch={this.preformSearch}
 				articles={this.state.articles}
 			/>
-            </div>
 		)
 	}
 }
