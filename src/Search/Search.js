@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import SearchResults from './SearchResults'
 import PropTypes from 'prop-types'
 
 class Search extends Component {
@@ -29,6 +30,8 @@ class Search extends Component {
 						value={this.state.value}
 					/>
 				</form>
+				<SearchResults articles={this.props.articles} />
+
 			</div>
 		)
 	}
