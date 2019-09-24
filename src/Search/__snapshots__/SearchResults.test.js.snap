@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Search Results renders the articles 1`] = `ShallowWrapper {}`;
+
+exports[`Search Results returns the default empty array when there is no data to map through 1`] = `ShallowWrapper {}`;
