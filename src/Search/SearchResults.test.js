@@ -10,14 +10,18 @@ const mockArticles = [
 ]
 
 describe('Search Results', () => {
-	test('renders', () => {
+	test('renders the articles', () => {
 		const wrap = shallow(<SearchResults articles={mockArticles} />)
 		expect(wrap).toMatchSnapshot()
     })
     
-	test('returns the default empty array when there is no data', () => {
-		const wrap = shallow(<SearchResults />)
-		expect(wrap).toMatchSnapShot()
-    })
+	test('does not break without any articles', () => {
+		const wrap = shallow(<SearchResults />) 
+		expect(wrap.find('li')).toHaveLength(0)
+	})
+	test('does not break with an empty array', () => {
+		const wrap = shallow(<SearchResults articles={[]} />)
+		expect(wrap.find('li')).toHaveLength(0)
+	})
 
 })

@@ -1,5 +1,5 @@
 const fetchArticles = async value => {
-	if (!value) return []
+	// if (!value) return []
 	const results = await fetch(
 		`https://content.guardianapis.com/search?=${value}&api-key=${process.env.REACT_APP_API_KEY}`
 	)

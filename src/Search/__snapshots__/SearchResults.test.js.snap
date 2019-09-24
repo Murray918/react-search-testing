@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Search Results renders 1`] = `ShallowWrapper {}`;
+exports[`Search Results renders the articles 1`] = `ShallowWrapper {}`;
