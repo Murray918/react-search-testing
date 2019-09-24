@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import Search from './Search'
 
 // Enzyme.configure({ adapter : new Adapter})
@@ -23,7 +23,18 @@ describe('Search component', () => {
 			preventDefault: () => {
 				prevented = true
 			}
-        })
-        expect(prevented).toBe(true)
+		})
+		expect(prevented).toBe(true)
+	})
+	test('renders search results when the articles change', () => {
+		const mountedWrap = mount(<Search articles={[]} />)
+
+		mountedWrap.setProps({
+			articles:[ {
+				webUrl: 'www.google.com',
+				webTitle: "Lets freaking party y'all!!!!"
+			}]
+		})
+		expect(mountedWrap.find('a').prop('href')).toEqual('www.google.com')
 	})
 })
